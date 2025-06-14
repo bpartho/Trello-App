@@ -6,11 +6,21 @@ import App from "./App.jsx";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router/router.jsx";
 import reportWebVitals from "./reportWebVitals";
+import BoardProvider from "./contexts/Board.jsx";
+import ListProvider from "./contexts/List.jsx";
+import TaskProvider from "./contexts/Task.jsx";
 
 createRoot(document.getElementById("root")).render(
   // <StrictMode>
   //   <App />
   // </StrictMode>
-  <RouterProvider router={router} />
+
+  <BoardProvider>
+    <ListProvider>
+      <TaskProvider>
+        <RouterProvider router={router} />,
+      </TaskProvider>
+    </ListProvider>
+  </BoardProvider>
 );
 reportWebVitals();

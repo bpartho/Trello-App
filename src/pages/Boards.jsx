@@ -1,9 +1,12 @@
 import React from "react";
+import BoardCreatingFrom from "./../components/BoardCreatingFrom";
+import BoardList from "./../components/BoardList";
 
 function Boards() {
   return (
     <div>
-      <p className="text-4xl">Boards</p>
+      <BoardCreatingFrom />
+      <BoardList />
     </div>
   );
 }

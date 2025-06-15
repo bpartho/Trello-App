@@ -10,10 +10,12 @@ const AddItem = ({ listAddItem, setEditMode }) => {
       }
       onClick={() => setEditMode(true)}
     >
-      <p className="text-xl font-bold text-gray-950">+</p>
-      <p className="text-lg font-semibold text-gray-600">
-        {listAddItem ? "Add A List" : "Add A Task"}
-      </p>
+      <div className="flex  gap-4">
+        <p className="text-xl font-bold text-white">+</p>
+        <p className="text-lg font-semibold text-white">
+          {listAddItem ? "Add A List" : "Add A Task"}
+        </p>
+      </div>
     </div>
   );
 };
